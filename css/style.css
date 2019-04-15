@@ -1,0 +1,166 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 10px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 375px;
+/*  background-image: url("images/MAP.png"); */
+
+}
+
+nav {
+  background-color: #6BBAD3;
+  position: fixed;
+  width: 375px;
+  height: 64px;
+}
+
+.menu {
+  display: table;
+  padding: 0px 16px 5px 16px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.arrow-left {
+  margin: 0 auto;
+  padding: 10px 0px 15px 15px;
+  position: absolute;
+  left: 4.76%;
+  right: 88.42%;
+  top: 26.3%;
+  bottom: 26.74%;
+}
+
+@media screen and (min-width: 675px) {
+  .container {
+    width: 90%;
+  }
+  nav {
+    width: 90%;
+  }
+}
+
+.map-section {
+  margin: 0 auto;
+  padding-top: 400px;
+  background-color: #a1a1a1;
+  width: 100%;
+}
+
+.bus-list {
+  margin: 0 auto;
+  padding-top: 0px;
+  width: 100%;
+}
+
+.direction {
+padding-bottom: 5px;
+font-style: normal;
+font-weight: 500;
+font-size: 1.5em;
+line-height: normal;
+color: #6BBAD3;
+}
+
+/* Bus details section */
+.bus-first /* individual block */ {
+  display: table;
+  background-color: #ffffff;
+  padding: 16px;
+  margin-bottom: 0px;
+  border-bottom: 0.25px solid #BCBBC1;
+  /* border-radius: 25px 25px 0px 0px; */
+  width: 100%;
+}
+.bus /* individual block */ {
+  display: table;
+  background-color: #ffffff;
+  padding: 16px;
+  margin-bottom: 0px;
+  border-bottom: 0.25px solid #BCBBC1;
+  width: 100%;
+}
+
+.details /* number, destination and frequency section */ {
+  display: inline-block;
+  float: left;
+  font-family: 'SF Pro Text', sans-serif;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.0175em;
+  color: #0B3C5D;
+}
+
+.bus-number {
+  float:left;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: normal;
+  color: #0B3C5D;
+}
+
+.destination {
+  font-weight: normal;
+  font-size: 13px;
+  color: #0B3C5D;
+}
+
+.clock {
+  margin: 0px 5px 0px 30px;
+  width: 15px;
+}
+
+.frequency {
+  font-weight: 300;
+  font-size: 13px;
+  padding: 10px 0px 13px 8px;
+  display: flex;
+  align-items: center;
+  color: #5A5A5A;
+}
+
+/* Arrival time details section */
+.time {
+  font-family: 'SF Pro Text', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  display: inline-block;
+  float: right;
+  padding: 10px 0px 0px 0px;
+  line-height: normal;
+  text-align: right;
+  color: #6BBAD3;
+}
+
+.arrival {
+font-weight: 300;
+font-size: 13px;
+padding-top: 3px;
+color: #5A5A5A;
+}
+
+.minutes {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: normal;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+div.bus:hover { background-color:#f3f8fb; }
