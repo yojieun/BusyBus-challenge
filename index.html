@@ -10,22 +10,24 @@
   </head>
   <body>
     <section class="container">
-      <nav>
-        <img src="images/Base.svg">
-        <ul class="menu">
-          <li class=""><img class="arrow-left" src="images/icons8-clock_8.png" alt="clock icon" aria-hidden="true">Every 20 minutes</li>
-          <li class="title">Washington & State</li>
-          <li class="">bars</li>
+      <ul class="nav">
+        <ul class="status-bar">
+          <li><img src="../images/signal.png" alt="signal" /></li>
+          <li id="current-time"><img src="../images/Time.png" alt="time" /></li>
+          <li id="battery"><img src="../images/Battery.png" alt="battery" /></li>
         </ul>
-        <!--<div class="arrow-left">
-          <i class="fa fa-chevron-left fa-inverse fa-2x" aria-hidden="true">Back</i>
-        </div>-->
-      </nav>
-  <!--    <img src="images/MAP.png" alt="map"> -->
-      <div class="map-section"></div>
+        <ul class="menu">
+          <li class="menu-left"><img class="arrow-left" src="../images/arrow-left.png" alt="arrow">Back</li>
+          <li class="location-name">Washington &amp; State</li>
+          <li class="menu-right"><a href="#"><img src="../images/Menu.png" alt="menu" /></a></li>
+        </ul>
+      </ul>
+      <div class="map-section">
       <section class="bus-list">
       <!-- bus 60 -->
         <ul class="bus-first">
+          <img class="arrow-down" src="../images/Arrow-down.png" alt="down arrow">
+          <br>
           <li class="direction">Eastbound</li>
           <ul class="details">
             <li class="bus-number">60</li>
@@ -133,6 +135,7 @@
         </ul>
 
       </section>
+      </div>
     </section>
   </body>
 </html>

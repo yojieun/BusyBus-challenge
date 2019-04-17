@@ -11,54 +11,140 @@ body {
 .container {
   margin: 0 auto;
   width: 375px;
-/*  background-image: url("images/MAP.png"); */
-
 }
 
-nav {
+.nav {
   background-color: #6BBAD3;
   position: fixed;
+  display: inline;
+  padding-top: 3px;
   width: 375px;
   height: 64px;
 }
 
-.menu {
-  display: table;
-  padding: 0px 16px 5px 16px;
-  margin-bottom: 0px;
-  width: 100%;
+.status-bar {
+  list-style: none;
+  height: 20px;
+  padding: 0px 5px 0px 5px;
 }
 
+ul.status-bar li {
+		display: inline;
+	}
+
+#battery {
+  float: right;
+}
+
+#current-time {
+position: absolute;
+left: calc(50% - 49px/2 + 1px);
+}
+
+.menu {
+	height: 84px;
+  list-style: none;
+  padding-top: 8px;
+}
+
+ul.menu li {
+		display: inline;
+	}
+
 .arrow-left {
+  display: inline;
   margin: 0 auto;
-  padding: 10px 0px 15px 15px;
+  padding: 0px 0px 15px 10px;
   position: absolute;
   left: 4.76%;
   right: 88.42%;
-  top: 26.3%;
-  bottom: 26.74%;
+}
+
+.menu-left {
+  position: absolute;
+  display: inline;
+  margin: 0 auto;
+  padding: 0px 0px 15px 32px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.menu-right {
+  display: inline;
+  margin: 0 auto;
+  padding: 5px 15px 15px 0px;
+  float: right;
+}
+
+.location-name {
+  position: absolute;
+  display: inline;
+  left: calc(50% - 158px/2 - 1.5px);
+  top: calc(50% - 22px/2 + 10px);
+
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.map-section {
+  margin: 0 auto;
+  padding-top: 400px;
+  width: 100%;
+  background-image: url("../images/Map_L.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
 @media screen and (min-width: 675px) {
   .container {
     width: 90%;
   }
-  nav {
+  .nav {
     width: 90%;
+  }
+  .map-section {
+    background-size: 100%;
+    background-image: url("../images/Map-wide.png");
   }
 }
 
-.map-section {
-  margin: 0 auto;
-  padding-top: 400px;
-  background-color: #a1a1a1;
-  width: 100%;
+
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 90%;
+  }
+  .nav {
+    width: 90%;
+  }
+  .map-section {
+    background-size: 100%;
+    padding-top: 500px;
+  }
 }
 
 .bus-list {
   margin: 0 auto;
   padding-top: 0px;
   width: 100%;
+  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 25px 25px 0px 0px;
+}
+
+.arrow-down {
+  position: absolute;
+  left: calc(50% - 49px/2 + 1px);
 }
 
 .direction {
@@ -71,25 +157,22 @@ color: #6BBAD3;
 }
 
 /* Bus details section */
-.bus-first /* individual block */ {
+ul.bus-first /* individual block */ {
   display: table;
-  background-color: #ffffff;
+  background: rgba(255,255,255, 0.9);
   padding: 16px;
-  margin-bottom: 0px;
-  border-bottom: 0.25px solid #BCBBC1;
-  /* border-radius: 25px 25px 0px 0px; */
+  border-radius: 25px 25px 0px 0px;
   width: 100%;
 }
-.bus /* individual block */ {
+ul.bus /* individual block */ {
   display: table;
-  background-color: #ffffff;
+  background: rgba(255,255,255, 0.9);
   padding: 16px;
-  margin-bottom: 0px;
-  border-bottom: 0.25px solid #BCBBC1;
+  border-top: 0.25px solid #BCBBC1;
   width: 100%;
 }
 
-.details /* number, destination and frequency section */ {
+ul.details /* number, destination and frequency section */ {
   display: inline-block;
   float: left;
   font-family: 'SF Pro Text', sans-serif;
@@ -99,7 +182,7 @@ color: #6BBAD3;
   color: #0B3C5D;
 }
 
-.bus-number {
+li.bus-number {
   float:left;
   font-weight: bold;
   font-size: 32px;
@@ -107,7 +190,7 @@ color: #6BBAD3;
   color: #0B3C5D;
 }
 
-.destination {
+li.destination {
   font-weight: normal;
   font-size: 13px;
   color: #0B3C5D;
@@ -118,7 +201,7 @@ color: #6BBAD3;
   width: 15px;
 }
 
-.frequency {
+li.frequency {
   font-weight: 300;
   font-size: 13px;
   padding: 10px 0px 13px 8px;
@@ -128,7 +211,7 @@ color: #6BBAD3;
 }
 
 /* Arrival time details section */
-.time {
+ul.time {
   font-family: 'SF Pro Text', sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -141,14 +224,14 @@ color: #6BBAD3;
   color: #6BBAD3;
 }
 
-.arrival {
+li.arrival {
 font-weight: 300;
 font-size: 13px;
 padding-top: 3px;
 color: #5A5A5A;
 }
 
-.minutes {
+li.minutes {
   font-weight: 500;
   font-size: 22px;
 }
@@ -163,4 +246,5 @@ h3 {
   font-size: 1.5em;
 }
 
-div.bus:hover { background-color:#f3f8fb; }
+ul.bus-first:hover { background-color:#f3f8fb; }
+ul.bus:hover { background-color:#f3f8fb; }
