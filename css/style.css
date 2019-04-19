@@ -20,6 +20,7 @@ body {
   padding-top: 3px;
   width: 375px;
   height: 64px;
+  z-index: 1;
 }
 
 .status-bar {
@@ -145,6 +146,7 @@ ul.menu li {
 .arrow-down {
   position: absolute;
   left: calc(50% - 49px/2 + 1px);
+  z-index: auto;
 }
 
 .direction {
@@ -198,7 +200,7 @@ li.destination {
 
 .clock {
   margin: 0px 5px 0px 30px;
-  width: 15px;
+  width: 13px;
 }
 
 li.frequency {
@@ -208,6 +210,8 @@ li.frequency {
   display: flex;
   align-items: center;
   color: #5A5A5A;
+  left: 26.67%;
+  right: 69.6%;
 }
 
 /* Arrival time details section */
@@ -231,7 +235,7 @@ padding-top: 3px;
 color: #5A5A5A;
 }
 
-li.minutes {
+.minutes {
   font-weight: 500;
   font-size: 22px;
 }
