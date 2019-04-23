@@ -4,7 +4,7 @@
 
 body {
   background-color: #333;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "SF Pro Display", "SF Pro Text";
   font-size: 10px;
 }
 
@@ -27,47 +27,49 @@ body {
   list-style: none;
   height: 20px;
   padding: 0px 5px 0px 5px;
+  text-align: center;
 }
 
 ul.status-bar li {
 		display: inline;
 	}
 
+#signal {
+  float: left;
+}
+
 #battery {
   float: right;
 }
 
 #current-time {
-position: absolute;
+position: inline-block;
 left: calc(50% - 49px/2 + 1px);
 }
 
 .menu {
 	height: 84px;
   list-style: none;
-  padding-top: 8px;
+  text-align: center;
+  font-family: "SF Pro Text", sans-serif;
+  font-style: normal;
+  padding: 8px 8px 0px 8px;
 }
 
 ul.menu li {
-		display: inline;
+		display: inline-block;
 	}
 
 .arrow-left {
-  display: inline;
   margin: 0 auto;
-  padding: 0px 0px 15px 10px;
-  position: absolute;
-  left: 4.76%;
-  right: 88.42%;
+  padding-right: 7px;
+  display: inline-block;
+  float: left;
 }
 
 .menu-left {
-  position: absolute;
-  display: inline;
-  margin: 0 auto;
-  padding: 0px 0px 15px 32px;
-  font-family: SF Pro Text;
-  font-style: normal;
+  display: inline-block;
+  float: left;
   font-weight: 300;
   font-size: 17px;
   line-height: 22px;
@@ -76,29 +78,22 @@ ul.menu li {
 }
 
 .menu-right {
-  display: inline;
+  display: inline-block;
   margin: 0 auto;
-  padding: 5px 15px 15px 0px;
+  padding: 5px 0px 15px 50px;
   float: right;
 }
 
 .location-name {
-  position: absolute;
-  display: inline;
-  left: calc(50% - 158px/2 - 1.5px);
-  top: calc(50% - 22px/2 + 10px);
-
-  font-family: SF Pro Text;
-  font-style: normal;
+  display: inline-block;
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
-  text-align: center;
   letter-spacing: 0.03em;
   color: #FFFFFF;
 }
 
-.map-section {
+main {
   margin: 0 auto;
   padding-top: 400px;
   width: 100%;
@@ -115,7 +110,7 @@ ul.menu li {
   .nav {
     width: 90%;
   }
-  .map-section {
+  main {
     background-size: 100%;
     background-image: url("../images/Map-wide.png");
   }
@@ -129,7 +124,7 @@ ul.menu li {
   .nav {
     width: 90%;
   }
-  .map-section {
+  main {
     background-size: 100%;
     padding-top: 500px;
   }
@@ -141,6 +136,8 @@ ul.menu li {
   width: 100%;
   box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.05);
   border-radius: 25px 25px 0px 0px;
+  font-family: "SF Pro Text", sans-serif;
+  font-style: normal;
 }
 
 .arrow-down {
@@ -177,8 +174,6 @@ ul.bus /* individual block */ {
 ul.details /* number, destination and frequency section */ {
   display: inline-block;
   float: left;
-  font-family: 'SF Pro Text', sans-serif;
-  font-style: normal;
   line-height: normal;
   letter-spacing: 0.0175em;
   color: #0B3C5D;
@@ -186,6 +181,8 @@ ul.details /* number, destination and frequency section */ {
 
 li.bus-number {
   float:left;
+  font-family: "SF Pro Display", sans-serif;
+  font-style: normal;
   font-weight: bold;
   font-size: 32px;
   line-height: normal;
@@ -216,8 +213,6 @@ li.frequency {
 
 /* Arrival time details section */
 ul.time {
-  font-family: 'SF Pro Text', sans-serif;
-  font-style: normal;
   font-weight: 300;
   font-size: 15px;
   display: inline-block;
@@ -240,15 +235,5 @@ color: #5A5A5A;
   font-size: 22px;
 }
 
-h1 {
-  font-size: 2em;
-  line-height: normal;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-ul.bus-first:hover { background-color:#f3f8fb; }
-ul.bus:hover { background-color:#f3f8fb; }
+ul.bus-first:hover { background-color: #f3f8fb; }
+ul.bus:hover { background-color: #f3f8fb; }
