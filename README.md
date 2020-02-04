@@ -2,10 +2,10 @@
 
 A local transit app to improve the rider experience by enhancing the visual data display and architecture of bus information. Responsible for user research, analysis, design, testing, and programing responsive prototype using HTML and CSS.
 
-![BusyBus](https://drive.google.com/drive/u/1/folders/15aLxu3DAehz-wHFV2fxbPYPz1SkeoIGm)
+<img src="https://user-images.githubusercontent.com/43821281/73778823-6de70080-4751-11ea-9679-503a24712a96.png" width="70%"></img> 
 
 ## Problem
-**Too maney buses...which one is mine?** 
+**Too many buses...which one is mine?** 
 With seven bus lines serving the same stop
 riders need a tool that let’s them know if/when their bus is arriving.
 
